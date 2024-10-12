@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+   <p>Click the button to sort Array in Ascending Order</p>
+<button onclick="ascending()">Ascending Order</button>
+<button onclick="descending()">Descending Order</button>
+<p id="Max"></p>
+<p id="111"> </p>
+
+    <script>
+    var num = [1, 3, 9, 2];
+    function myFunction(num) {
+        return num * 10;
+    }
+    var newarray = num.map(myFunction);
+    document.getElementById("111").innerHTML = newarray;
+
+
+
+
+ var points=[
+    50, 50, 61, 1, 2, 100];
+document.getElementById("Max").innerHTML= points;
+
+    function ascending(){
+    points.sort(function(a,b){return(a - b)});
+    document.getElementById("Max").innerHTML=points;
+}
+    function descending() {
+        points.sort(function (a, b) { return (b - a) });
+        document.getElementById("Max").innerHTML = points;
+    }
+    </script>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
